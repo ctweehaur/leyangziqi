@@ -1,4 +1,5 @@
 const poemData = [
+    // 🎯【第一段】：交代乐羊子妻的身世背景
     { text: "河南", py: "hé nán", zh: "河南，汉代郡名，这里指河南郡。", en: "In Henan Prefecture," },
     { text: "乐羊子", py: "lè yáng zǐ", zh: "乐羊子，故事中的男主角。", en: "Leyangzi's" },
     { text: "之", py: "zhī", zh: "助词，的。", en: "" },
@@ -13,7 +14,9 @@ const poemData = [
     },
     { text: "之", py: "zhī", zh: "的。", en: "" },
     { text: "女也", py: "nǚ yě", zh: "女儿。<strong>也</strong>：文言句末判断语气词，表陈述。", en: "or whose daughter she was." },
-    { text: "。", punc: true },
+    { text: "。", punc: true, isParagraphEnd: true }, // 👈 🎯【第1段结束，强制分段】
+
+    // 🎯【第二段】：路遗金饼，羞惭捐金
     { text: "羊子", py: "lè yáng zǐ", zh: "乐羊子。", en: "Leyangzi" },
     { text: "尝行路", py: "cháng xíng lù", zh: "<strong>词组大意</strong>：曾经在路上行走。尝：副词，曾经。", en: "was once walking along a road," },
     { text: "，", punc: true },
@@ -74,7 +77,9 @@ const poemData = [
     { text: "乃捐金于野", py: "nǎi juān jīn yú yě", zh: "<strong>大意</strong>：于是把金子丢弃在荒野里。乃：于是；捐：丢弃；于：在。", en: "so he threw the gold in the wilderness," },
     { text: "，", punc: true },
     { text: "而远寻师学", py: "ér yuǎn xún shī xué", zh: "<strong>大意</strong>：然后到远方去寻找老师学习。而：表顺接连词。", en: "and traveled far away to find a master to study." },
-    { text: "。", punc: true },
+    { text: "。", punc: true, isParagraphEnd: true }, // 👈 🎯【第2段结束，强制分段】
+
+    // 🎯【第三段】：引刀断织，复还终业
     { text: "一年归来", py: "yī nián guī lái", zh: "过了一年，乐羊子返回家中。", en: "One year later, he returned home," },
     { text: "，", punc: true },
     { text: "妻跪问其故", py: "qī guì wèn qí gù", zh: "<strong>大意</strong>：妻子跪着询问他回家的原因。跪：汉代古人席地而坐，直身表示敬意；故：原因。", en: "his wife knelt and asked him the reason for his return." },
@@ -144,7 +149,6 @@ const poemData = [
     { text: "，", punc: true },
     { text: "以就懿德", py: "yǐ jiù yì dé", zh: "<strong>大意</strong>：来成就美德。以：连词，来；就：成就；懿德：美德。", en: "so as to achieve noble virtue;" },
     { text: "；", punc: true },
-    // 🎯【方位词死绑定】：若中道而归
     { text: "若中道而归", py: "ruò zhōng dào ér guī", zh: "<strong>大意</strong>：如果半路停下来回家。中道：半路、中途。", en: "if you return halfway through," },
     { text: "，", punc: true },
     { 
@@ -160,11 +164,11 @@ const poemData = [
     { text: "，", punc: true },
     { text: "复还终业", py: "fù huán zhōng yè", zh: "<strong>词组大意</strong>：再次回去完成学业。复：再次；终业：完成学业。", en: "returned once again to complete his studies," },
     { text: "，", punc: true },
-    // 🎯【意群死绑定】：遂七年不返
     { text: "遂七年不返", py: "suì qī nián bù fǎn", zh: "<strong>词组大意</strong>：于是整整七年没有回家。不返：没有返回。", en: "and did not return home for seven years." },
-    { text: "。", punc: true },
+    { text: "。", punc: true, isParagraphEnd: true }, // 👈 🎯【第3段结束，强制分段】
+
+    // 🎯【第四段】：邻鸡谬入，不餐而泣
     { text: "尝有它舍鸡", py: "cháng yǒu tā shè jī", zh: "<strong>大意</strong>：曾经有别人家的一只鸡。它舍：别家、邻居。", en: "Once, a neighbor's chicken" },
-    // 🎯【方位词死绑定】：谬入园中
     { 
         text: "谬入园中", 
         py: "miù rù yuán zhōng", 
@@ -174,7 +178,6 @@ const poemData = [
     { text: "，", punc: true },
     { text: "姑盗杀而食之", py: "gū dào shā ér shí zhī", zh: "<strong>大意</strong>：婆婆偷抓来杀了并把它吃了。姑：婆婆；盗：偷窃、偷偷地。", en: "his mother secretly killed it and cooked it to eat." },
     { text: "，", punc: true },
-    // 🎯【意群死绑定】：妻对鸡不餐而泣
     { 
         text: "妻对鸡不餐而泣", 
         py: "qī duì jī bù cān ér qì", 
@@ -194,7 +197,9 @@ const poemData = [
     { text: "。", punc: true },
     { text: "”", punc: true },
     { text: "姑竟弃之", py: "gū jìng qì zhī", zh: "<strong>大意</strong>：婆婆听完感到惭愧，最终把肉倒掉不吃了。竟：最终；弃：丢弃。", en: "The mother felt ashamed and finally threw it away." },
-    { text: "。", punc: true },
+    { text: "。", punc: true, isParagraphEnd: true }, // 👈 🎯【第4段结束，强制分段】
+
+    // 🎯【第五段】：盗贼劫姑，刎颈全贞
     { text: "后盗欲有犯妻者", py: "hòu dào yù yǒu fàn qī zhě", zh: "<strong>大意</strong>：后来有强盗想要侵犯乐羊子妻。犯：侵犯、非礼。", en: "Later, a bandit wanted to assault the wife," },
     { text: "，", punc: true },
     { text: "乃先劫其姑", py: "nǎi xiān jié qí gū", zh: "<strong>大意</strong>：强盗就先挟持绑架了她的婆婆。劫：劫持、挟持威胁。", en: "so he first kidnapped her mother-in-law." },
@@ -209,7 +214,6 @@ const poemData = [
     { text: "“", punc: true },
     { text: "释汝刀从我者可全", py: "shì rǔ dāo cóng wǒ zhě kě quán", zh: "<strong>大意</strong>：放下你的刀顺从我，你就能保全生命。释：放下；汝：你；全：保全活命。", en: "If you drop your knife and follow me, you will be safe;" },
     { text: "，", punc: true },
-    // 🎯【意群死绑定】：不从我者
     { text: "不从我者", py: "bù cóng wǒ zhě", zh: "<strong>大意</strong>：如果不顺从我。不从：不听从、不顺从。", en: "if you do not follow me," },
     { text: "，", punc: true },
     { text: "则杀汝姑", py: "zé shā rǔ gū", zh: "<strong>大意</strong>：我就立刻杀了你的婆婆。则：就；汝姑：你的婆婆。", en: "I will kill your mother-in-law." },
@@ -218,7 +222,6 @@ const poemData = [
     { text: "，", punc: true },
     { text: "举刀刎颈而死", py: "jǔ dāo wěn jǐng ér sǐ", zh: "<strong>大意</strong>：举起刀割断自己的脖子自尽了。刎颈：割脖子自杀。", en: "then raised the knife, cut her own throat, and died." },
     { text: "。", punc: true },
-    // 🎯【意群死绑定】：盗亦不杀其姑
     { text: "盗亦不杀其姑", py: "dào yì bù shā qí gū", zh: "<strong>词组大意</strong>：强盗被震撼了，也最终没有杀她的婆婆。不杀：没杀。", en: "The bandit was shocked and did not kill her mother-in-law either." },
     { text: "。", punc: true },
     { text: "太守闻之", py: "tài shǒu wén zhī", zh: "<strong>词组大意</strong>：当地的太守官长听说了这件壮烈的事。太守：汉代郡的长官。", en: "The local governor heard of this," },
